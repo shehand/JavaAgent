@@ -12,5 +12,23 @@ repositories {
 }
 
 dependencies {
+    compile 'javassist:javassist:3.12.1.GA'
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    archiveName = "${rootProject.name}-${rootProject.version}.jar"
+    manifest {
+        attributes(
+                'Premain-Class': 'com.balcov.agent.Agent',
+                'Can-Redefine-Classes': 'true',
+                'Can-Retransform-Classes': 'true',
+                'Can-Set-Native-Method-Prefix': 'true',
+                'Implementation-Title': "ClassLogger",
+                'Implementation-Version': rootProject.version,
+                'Built-By': System.getProperty('user.name'),
+                'Built-Date': new Date(),
+                'Built-JDK': System.getProperty('java.version')
+        )
+    }
 }

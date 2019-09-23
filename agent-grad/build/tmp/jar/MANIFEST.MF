@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: ClassLogger
+Premain-Class: com.balcov.agent.Agent
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: shehan
+Built-Date: Fri Sep 20 17:05:54 IST 2019
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
+Can-Set-Native-Method-Prefix: true
+Built-JDK: 1.8.0_222
+
